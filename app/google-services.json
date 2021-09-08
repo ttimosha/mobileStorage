@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "900793103031",
+    "project_id": "diploma-fe942",
+    "storage_bucket": "diploma-fe942.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900793103031:android:130c45977e878c7bf75332",
+        "android_client_info": {
+          "package_name": "com.example.mobilestorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900793103031-mmt09nn9onlpp89sni294et8eb1bvqve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvwYEodmf4Pv_EQ0WOw6k80XcZecIWeUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900793103031-mmt09nn9onlpp89sni294et8eb1bvqve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

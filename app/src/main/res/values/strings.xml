@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mobileStorage</string>
+    <string name="title_activity_main_menu">MainActivity</string>
+    <string name="title_home">Товары</string>
+    <string name="title_add">Добавить товар</string>
+    <string name="title_arrival">Приходы</string>
+    <string name="title_departure">Реализация</string>
+
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mobilestorage.fragments.home.HomeFragment"
+        android:label="Товары"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_productInfo"
+            app:destination="@id/product_info"
+            app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_user"
+            app:destination="@id/user" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.example.mobilestorage.fragments.add.AddProductFragment"
+        android:label="Добавить товар"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_navigation_add_to_provider"
+            app:destination="@id/provider" />
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_user"
+            app:destination="@id/user" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_departure"
+        android:name="com.example.mobilestorage.fragments.departure.DepartureFragment"
+        android:label="Реализация"
+        tools:layout="@layout/fragment_departure" >
+        <action
+            android:id="@+id/action_navigation_departure_to_add_departure"
+            app:destination="@id/add_departure" />
+        <action
+            android:id="@+id/action_navigation_departure_to_departure_info"
+            app:destination="@id/departure_info" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_departure"
+        android:name="com.example.mobilestorage.fragments.departure.AddDepartureFragment"
+        android:label="Добавить реализацию"
+        tools:layout="@layout/fragment_add_departure" >
+        <action
+            android:id="@+id/action_add_departure_to_navigation_departure"
+            app:destination="@id/navigation_departure" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/user"
+        android:name="com.example.mobilestorage.fragments.user.UserFragment"
+        android:label="Пользователь"
+        tools:layout="@layout/fragment_user" />
+
+    <fragment
+        android:id="@+id/departure_info"
+        android:name="com.example.mobilestorage.fragments.departure.DepartureInfoFragment"
+        android:label="Информация о реализации"
+        tools:layout="@layout/fragment_departure_info" />
+
+    <fragment
+        android:id="@+id/arrival_info"
+        android:name="com.example.mobilestorage.fragments.arrival.ArrivalInfoFragment"
+        android:label="Информация о приходе"
+        tools:layout="@layout/fragment_arrival_info" />
+
+    <fragment
+        android:id="@+id/navigation_arrival"
+        android:name="com.example.mobilestorage.fragments.arrival.ArrivalFragment"
+        android:label="Приходы"
+        tools:layout="@layout/fragment_arrival" >
+        <action
+            android:id="@+id/action_navigation_arrival_to_add_arrival"
+            app:destination="@id/add_arrival" />
+        <action
+            android:id="@+id/action_navigation_arrival_to_arrival_info"
+            app:destination="@id/arrival_info" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_arrival"
+        android:name="com.example.mobilestorage.fragments.arrival.AddArrivalFragment"
+        android:label="Добавить приход"
+        tools:layout="@layout/fragment_add_arrival" >
+        <action
+            android:id="@+id/action_add_arrival_to_provider"
+            app:destination="@id/provider" />
+        <action
+            android:id="@+id/action_add_arrival_to_navigation_arrival"
+            app:popUpTo="@id/navigation_arrival" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/provider"
+        android:name="com.example.mobilestorage.fragments.provider.ProviderFragment"
+        android:label="Поставщик"
+        tools:layout="@layout/fragment_provider" >
+        <action
+            android:id="@+id/action_provider_to_navigation_add"
+            app:destination="@id/navigation_add" />
+        <action
+            android:id="@+id/action_provider_to_add_provider"
+            app:destination="@id/add_provider" />
+        <action
+            android:id="@+id/action_provider_to_productInfo"
+            app:destination="@id/product_info" />
+        <action
+            android:id="@+id/action_provider_to_add_arrival"
+            app:destination="@id/add_arrival" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_provider"
+        android:name="com.example.mobilestorage.fragments.provider.AddProviderFragment"
+        android:label="Пользователь"
+        tools:layout="@layout/fragment_add_provider" >
+        <action
+            android:id="@+id/action_add_provider_to_provider"
+            app:popUpTo="@id/provider" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/product_info"
+        android:name="com.example.mobilestorage.fragments.home.product.ProductInfoFragment"
+        android:label="Информация о товаре"
+        tools:layout="@layout/fragment_product_info" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productInfo_to_provider"
+            app:destination="@id/provider" />
+    </fragment>
+</navigation>
